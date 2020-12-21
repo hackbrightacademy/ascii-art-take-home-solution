@@ -7,7 +7,7 @@ from asciiart import Canvas, Rectangle
 
 class TestCanvas(unittest.TestCase):
     def setUp(self):
-        self.canvas = Canvas()
+        self.canvas = Canvas(width=10, height=10)
 
     def test_canvas_width_height(self):
         """Test that canvas is initialized with correct width & height."""
