@@ -11,7 +11,7 @@ class Canvas:
         - height (int): The height of the canvas
     """
 
-    def __init__(self):
+    def __init__(self, width, height):
         """Initialize a canvas.
 
         Return:
@@ -19,8 +19,8 @@ class Canvas:
         """
 
         self.elements = []
-        self.width = 10
-        self.height = 10
+        self.width = width
+        self.height = height
 
     def _update_data(self):
         """Update the characters in self._data
@@ -29,8 +29,12 @@ class Canvas:
             None
         """
 
-        data = [[None for _ in range(self.width)]
-                for _ in range(self.height)]
+        data = [
+                [
+                    None for _ in range(self.width)
+                ]
+                for _ in range(self.height)
+            ]
 
         for el in self.elements:
             # TODO: this assumes that all 'elements' will be rendered
